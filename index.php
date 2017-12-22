@@ -44,14 +44,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['pwd'])) {
     }
 
 
-} else {
-
-    $response = array();
-    $response['status'] = false;
-    $response['error'] = "Name and Email and Password Required";
-    echo json_encode($response);
-    exit;
-}
+} 
 if (isset($_POST['modelId'])
     && isset($_POST['modelFullname'])
     && isset($_POST['modelEmail'])
@@ -87,12 +80,6 @@ if (isset($_POST['modelId'])
     }
 
 
-} else {
-    $response = array();
-    $response['status'] = false;
-    $response['error'] = "Name and Email and Password Required";
-    echo json_encode($response);
-    exit;
 }
 if (isset($_POST['id'])) {
     $deleteId = $_POST['id'][0];
